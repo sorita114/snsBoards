@@ -2,3 +2,4 @@
 .pagination li a{border:0}
 .panel-footer img{width:25px;height:25px}
 .modal-body button .fa{margin-right:10px}
+.list-group .list-group-item-heading .btn{border:0;background-color:inherit}
