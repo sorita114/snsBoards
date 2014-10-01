@@ -1,4 +1,3 @@
-(function($, window){
-  $(document).ready(function(){
-  });
-})(jQuery, window);
+'use strict';
+
+var snsBoard = angular.module('snsBoard',[]);

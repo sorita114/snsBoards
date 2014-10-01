@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" ng-app="snsBoard">
   <head>
     <title>SNS board Detail</title>
     <meta charset="utf-8">
@@ -169,18 +169,20 @@
             <div id="collapseOne" class="panel-collapse collapse out">
               <div class="panel-body">
                 <div class="row">
-                  <div class="col-lg-11">
-                    <div class="input-group">
-                      <span class="input-group-addon"><img src="./public/image/yellow.png" alt="user profile" class="img-circle user-profile-image"></span>
-                      <textarea rows="3" class="form-control"></textarea>
+                  <form role="form" class="clearfix">
+                    <div class="col-lg-11">
+                      <div class="input-group">
+                        <span class="input-group-addon"><img src="./public/image/yellow.png" alt="user profile" class="img-circle user-profile-image"></span>
+                        <textarea rows="3" class="form-control"></textarea>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-1">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-                    <p class="text-center">
-                      <a href="#">Sign-in</a>
-                    </p>
-                  </div>
+                    <div class="col-lg-1">
+                      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                      <p class="text-center">
+                        <a href="#">Sign-in</a>
+                      </p>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -188,7 +190,22 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="loginModal">
+      <div class="modal-dialog" role="dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+            <h4 class="modal-title text-center">Login</h4>
+          </div>
+          <div class="modal-body" ng-controller="SNSLibraryController">
+            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="signin('facebook')"><i class="fa fa-facebook"></i>FaceBook</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="signin('twitter')"><i class="fa fa-twitter"></i>Twitter</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./public/script/bootstrap.min.js"></script>
     <script src="detail.js" charset="utf-8"></script>
+    <script src="./controller/SNSLibraryController.js" charset="utf-8"></script>
   </body>
 </html>
