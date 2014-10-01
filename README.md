@@ -7,5 +7,9 @@
 - 2014.09.30  
 > html 샘플링 작업완료  
 - 2014.10.01  
-> 컨트롤러 생성 - sns library  
-> service 생성 - facebook, twitter  
+> 컨트롤러 생성 - SNSLibraryController  
+> service 생성 - facebookUtil, twitterUtil  
+> 컨트롤러 생성 - SNSListLibraryController  
+> service 생성 - localStorageService  
+> model 생성 - SNSListStorage  
+> view 생성 -  SNSList , SNSPaging  
