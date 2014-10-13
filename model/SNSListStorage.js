@@ -7,6 +7,9 @@ snsBoard.factory('snsListStorage', ['localStorageService', function(storage){
     },
     put : function(datas){
       storage.set(datas);
+    },
+    remove : function(){
+      
     }
   }
 }]);
