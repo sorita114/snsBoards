@@ -13,3 +13,7 @@
 > service 생성 - localStorageService  
 > model 생성 - SNSListStorage  
 > view 생성 -  SNSList , SNSPaging  
+- 2014.10.13  
+> directive 생성  
+> SNS 기능 추가 - signout  
+> angularJS bootstrap 라이브러리 추가  
