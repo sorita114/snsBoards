@@ -5,6 +5,9 @@ snsBoard.factory('TwitterSDK', function(){
     signin : function(){
       console.log('twiiter signin~');
     },
+    signout: function(){
+      console.log('twitter signout');
+    },
     post : function(){
       console.log('twiiter post~');
     },

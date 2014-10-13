@@ -10,4 +10,8 @@ snsBoard.controller('SNSLibraryController', function SNSLibraryController($scope
     _sdk[type].signin();
   };
   
+  $scope.signout = function(type){
+    _sdk[type].signout();
+  }
+  
 });

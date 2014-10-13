@@ -5,6 +5,9 @@ snsBoard.factory('FacebookSDK', function(){
     signin : function(){
       console.log('facebook signin~');
     },
+    signout : function(){
+      console.log('facebook signout~');
+    },
     post : function(){
       console.log('facebook post~');
     },
