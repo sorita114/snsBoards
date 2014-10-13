@@ -86,21 +86,8 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse out">
               <div class="panel-body">
-                <div class="row">
-                  <form role="form" class="clearfix">
-                    <div class="col-lg-11">
-                      <div class="input-group">
-                        <span class="input-group-addon"><img src="./public/image/yellow.png" alt="user profile" class="img-circle user-profile-image"></span>
-                        <textarea rows="3" class="form-control"></textarea>
-                      </div>
-                    </div>
-                    <div class="col-lg-1">
-                      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-                      <p class="text-center">
-                        <a href="#">Sign-in</a>
-                      </p>
-                    </div>
-                  </form>
+                <div class="row" ng-controller="SNSFormLibraryController">
+                  <sns-form></sns-form>
                 </div>
               </div>
             </div>

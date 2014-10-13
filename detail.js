@@ -1,3 +1,5 @@
-'use strict';
-
-var snsBoard = angular.module('snsBoard',['ui.bootstrap']);
+(function(window){
+  'use strict';
+  
+  window.snsBoard = angular.module('snsBoard',['ui.bootstrap']);
+})(window);
