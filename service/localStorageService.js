@@ -9,7 +9,7 @@
         return angular.fromJson(localStorage.getItem(STORAGE_ID));
       },
       set : function(datas){
-        localStorgae.setItem(STORAGE_ID, angular.toJson(datas));
+        localStorage.setItem(STORAGE_ID, angular.toJson(datas));
       }
     };
   });
