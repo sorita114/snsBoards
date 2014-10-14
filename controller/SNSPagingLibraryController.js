@@ -3,7 +3,7 @@
   
   snsBoard
     .controller('SNSPagingLibraryController', function($scope, snsListStorage){
-      $scope.totalItems = snsListStorage.get() ? snsListStorage.get().length : 0;
+      $scope.totalItems = snsListStorage.get();
       $scope.currentPage = 1;
       $scope.maxSize = 5;
       
@@ -11,10 +11,10 @@
         console.log('Page changed to: ' + $scope.currentPage);
       };
     })
-    .directive('snsPagenation', function(){
+    .directive('snsPagination', function(){
       return{
         restrict : 'E',
-        templateUrl : './directive/pagenation.html'
+        templateUrl : './directive/pagination.html'
       };
     });
 })(window, snsBoard);
