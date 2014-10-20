@@ -6,4 +6,5 @@
   snsBoard.factory('Lists', function(){
     return new Array();
   });
+  
 })(window);

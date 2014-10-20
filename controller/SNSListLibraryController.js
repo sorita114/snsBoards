@@ -3,14 +3,23 @@
   
   snsBoard
     .controller('SNSListLibraryController', function($scope, snsListStorage){
-      $scope.datas = snsListStorage.get();
-      //example
-      // $scope.datas = [{
-      //   writeName : 'hyyoon',
-      //   writeImage : 'blue',
-      //   writeDate : '2014-10-13 10:46:00',
-      //   comment : 'test'
-      // }];
+      var datas = $scope.datas = snsListStorage.get();
+      var lists = [];
+      var maxsize = 2;
+      var start = 0;
+      var end = maxsize;
+      while(end <= datas.length){
+        var i = 1;
+        lists.push({
+          index : i,
+          items : datas.slice(start, end)
+        });
+        start = start + maxsize;
+        end = end + maxsize;
+        i++;
+      }
+      console.log(lists);
+      $scope.pages = lists;
     })
     .directive('snsList', function(){
       return{
