@@ -1,19 +1,14 @@
-(function(window, snsBoard){
-  'use strict';
+list.service('ListService', function(){
+  var lists = [];
   
-  snsBoard.factory('ListService', function(){
-    var lists = [];
-    return {
-      put : function(data){
-        //TODO push lists
-      },
-      get : function(index){
-        if(index){
-          //TODO return lists[index]
-        } else {
-          //TODO retrun all lists
-        }
-      }
-    };
-  });
-})(window, snsBoard);
+  this.put = function(data){
+    //TODO push lists
+  };
+  this.get = function(index){
+    if(index){
+      //TODO return lists[index]
+    } else {
+      //TODO retrun all lists
+    }
+  };
+});

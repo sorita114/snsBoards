@@ -1,10 +1,6 @@
-(function(window, snsBoard){
-  'use strict';
-  
-  snsBoard.directive('PagingTemplate', function(){
-    return{
-      restrict : 'E',
-      templateUrl : './directive/pagination.html'
-    };
-  });
-})(window, snsBoard);
+paging.directive('pagingTemplate', function(){
+  return{
+    restrict : 'E',
+    templateUrl : './Paging/_paging.html'
+  };
+});

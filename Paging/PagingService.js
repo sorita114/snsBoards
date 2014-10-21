@@ -1,7 +1,3 @@
-(function(window, snsBoard){
-  'use strict';
+paging.service('PagingService', function(){
   
-  snsBoard.factory('PagingService', function(){
-    
-  });
-})(window, snsBoard);
+});

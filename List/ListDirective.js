@@ -1,10 +1,6 @@
-(function(window, snsBoard){
-  'use strict';
-  
-  snsBoard.directive('ListTemplate', function(){
-    return{
-      restrict : 'E',
-      templateUrl : './_list.html'
-    };
-  });
-})(window, snsBoard);
+list.directive('listTemplate', function(){
+  return{
+    restrict : 'E',
+    templateUrl : './List/_list.html'
+  };
+});
