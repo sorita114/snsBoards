@@ -40,4 +40,14 @@
 - 2014.10.21  
   1. 모듈 구조 변경  
   
+---  
+- 2014.10.22  
+  1. update structure  
+  2. modify dependencies  
+  3. make global dependencies -> UserInfo, BoardLists  
+  4. update detail.html -> make template login template  
+  5. make directive LoginDirective.js  
+  6. add temporary profile image file -> public/image/profile1.png  
+  7. connection controller and services  
+  
   
