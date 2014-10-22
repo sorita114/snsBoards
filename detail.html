@@ -96,18 +96,7 @@
       </div>
     </div>
     <div class="modal fade" id="loginModal" ng-controller="LoginCtrl">
-      <div class="modal-dialog" role="dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
-            <h4 class="modal-title text-center">Login</h4>
-          </div>
-          <div class="modal-body">
-            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="signin('facebook')"><i class="fa fa-facebook"></i>FaceBook</button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="signin('twitter')"><i class="fa fa-twitter"></i>Twitter</button>
-          </div>
-        </div>
-      </div>
+      <login-template></login-template>
     </div>
     <script src="./public/script/angular.min.js"></script>
     <script src="./public/script/jquery-2.1.1.min.js"></script>
@@ -125,5 +114,6 @@
     <script src="./Form/FormDirective.js" charset="utf-8"></script>
     <script src="./Login/LoginService.js" charset="utf-8"></script>
     <script src="./Login/LoginController.js" charset="utf-8"></script>
+    <script src="./Login/LoginDirective.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,10 +1,11 @@
-form.controller('FormCtrl', ['$scope','FormService' , function($scope,formService){
+form.controller('FormCtrl', ['$scope','FormService', function($scope, formService){
+  var userInfo = $scope.userInfo = formService.getUserInfo();
   $scope.submit = function(data){
     $scope.form = angular.copy(data);
-    $scope.form.writeName = 'hyyoon';
-    $scope.form.writeImage = 'yellow';
     $scope.form.writeDate = getTime();
-    snsListStorage.put($scope.form);
+    $scope.form.writeName = userInfo.name;
+    $scope.form.writeImage = userInfo.profileImage;
+    formService.put($scope.form);
     $scope.form = {};
   };
   

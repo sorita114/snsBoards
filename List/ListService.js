@@ -1,14 +1,5 @@
-list.service('ListService', function(){
-  var lists = [];
-  
-  this.put = function(data){
-    //TODO push lists
+list.service('ListService',['Boards', function(boards){
+  this.get = function(){
+    return boards;
   };
-  this.get = function(index){
-    if(index){
-      //TODO return lists[index]
-    } else {
-      //TODO retrun all lists
-    }
-  };
-});
+}]);

@@ -1,9 +1,11 @@
-form.service('FormService', function(){
-  var form = [];
-  
+form.service('FormService', ['Boards','UserInfo', function(boards, userInfo){
+  this.getUserInfo = function(){
+    return userInfo;
+  };
   this.put = function(data){
-    form.push(data);
     //TODO push lists and reset lists
+    data.index = boards.length === 0 ? 0 : boards.length;
+    boards.push(data);
   };
   this.get = function(index){
     if(index){
@@ -12,4 +14,4 @@ form.service('FormService', function(){
       //TODO get data for all lists;
     }
   };
-});
+}]);

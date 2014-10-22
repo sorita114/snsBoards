@@ -1,6 +1,9 @@
-login.service('FacebookSDK', function(){
+login.service('FacebookSDK',['UserInfo', function(userInfo){
   this.signin = function(){
     console.log('facebook signin~');
+    userInfo.name = 'hyyoon';
+    userInfo.profileImage = '../public/image/profile1.jpg';
+    userInfo.email = 'sorita114@gmail.com';
   };
   this.signout = function(){
     console.log('facebook signout~');
@@ -11,11 +14,14 @@ login.service('FacebookSDK', function(){
   this.sharing = function(){
     console.log('facebook sharing~');
   };
-});
+}]);
 
-login.service('TwitterSDK', function(){
+login.service('TwitterSDK',['UserInfo', function(userInfo){
   this.signin = function(){
     console.log('twiiter signin~');
+    userInfo.name = 'hyyoon';
+    userInfo.profileImage = '../public/image/profile1.jpg';
+    userInfo.email = 'sorita114@gmail.com';
   };
   this.signout = function(){
     console.log('twitter signout');
@@ -26,4 +32,4 @@ login.service('TwitterSDK', function(){
   this.sharing = function(){
     console.log('twiiter sharing~');
   };
-});
+}]);
