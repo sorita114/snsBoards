@@ -1,0 +1,15 @@
+<li class="clearfix" ng-repeat="data in datas">
+  <div class="pull-left writer-profileImage">
+    <img ng-src="{{data.writeImage}}" alt="{{data.writeName}}" class="img-circle"/>
+  </div>
+  <div class="pull-left coment-wrap">
+    <blockquote>
+      <p>
+        <small>{{data.writeName}} | {{data.writeDate | date:'yyyy-MM-dd HH:mm:ss'}}</small>
+      </p>
+      <p class="coment">
+        {{data.comment}}
+      </p>
+    </blockquote>
+  </div>
+</li>

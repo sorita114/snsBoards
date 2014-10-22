@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" ng-app="snsBoard">
+<html lang="ko" ng-app="app">
   <head>
     <title>SNS board Detail</title>
     <meta charset="utf-8">
@@ -57,20 +57,20 @@
           </div>
         </div>
       </div>
-      <div class="row" ng-controller="SNSListLibraryController">
+      <div class="row" ng-controller="ListCtrl">
         <div class="col-md-12 col-xs-12">
           <ul class="list-unstyled coments-list">
-            <sns-list></sns-list>
+            <list-template></list-template>
           </ul>
         </div>
-      </div>
-      <div class="row" ng-controller="SNSPagingLibraryController">
-        <div class="col-md-12 col-xs-12 text-center">
-          <div class="row hidden-xs">
-            <sns-pagination></sns-pagination>
-          </div>
-          <div class="row visible-xs">
-            <button type="button" class="btn btn-default btn-lg btn-block">More..</button>
+        <div class="row" ng-controller="PagingCtrl">
+          <div class="col-md-12 col-xs-12 text-center">
+            <div class="row hidden-xs">
+              <paging-template></paging-template>
+            </div>
+            <div class="row visible-xs">
+              <button type="button" class="btn btn-default btn-lg btn-block">More..</button>
+            </div>
           </div>
         </div>
       </div>
@@ -86,8 +86,8 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse out">
               <div class="panel-body">
-                <div class="row" ng-controller="SNSFormLibraryController">
-                  <sns-form></sns-form>
+                <div class="row" ng-controller="FormCtrl">
+                  <form-template></form-template>
                 </div>
               </div>
             </div>
@@ -95,32 +95,25 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="loginModal" ng-controller="SNSLibraryController">
-      <div class="modal-dialog" role="dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
-            <h4 class="modal-title text-center">Login</h4>
-          </div>
-          <div class="modal-body">
-            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="signin('facebook')"><i class="fa fa-facebook"></i>FaceBook</button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="signin('twitter')"><i class="fa fa-twitter"></i>Twitter</button>
-          </div>
-        </div>
-      </div>
+    <div class="modal fade" id="loginModal" ng-controller="LoginCtrl">
+      <login-template></login-template>
     </div>
     <script src="./public/script/angular.min.js"></script>
     <script src="./public/script/jquery-2.1.1.min.js"></script>
     <script src="./public/script/bootstrap.min.js"></script>
     <script src="./public/script/ui-bootstrap-tpls-0.11.2.min.js" charset="utf-8"></script>
     <script src="detail.js" charset="utf-8"></script>
-    <script src="./controller/SNSLibraryController.js"></script>
-    <script src="./controller/SNSListLibraryController.js"></script>
-    <script src="./controller/SNSPagingLibraryController.js" charset="utf-8"></script>
-    <script src="./controller/SNSFormLibraryController.js" charset="utf-8"></script>
-    <script src="./service/facebookUtil.js"></script>
-    <script src="./service/twitterUtil.js"></script>
-    <script src="./service/localStorageService.js"></script>
-    <script src="./model/SNSListStorage.js"></script>
+    <script src="./List/ListService.js" charset="utf-8"></script>
+    <script src="./List/ListController.js" charset="utf-8"></script>
+    <script src="./List/ListDirective.js" charset="utf-8"></script>
+    <script src="./Paging/PagingService.js" charset="utf-8"></script>
+    <script src="./Paging/PagingController.js" charset="utf-8"></script>
+    <script src="./Paging/PagingDirective.js" charset="utf-8"></script>
+    <script src="./Form/FormService.js" charset="utf-8"></script>
+    <script src="./Form/FormController.js" charset="utf-8"></script>
+    <script src="./Form/FormDirective.js" charset="utf-8"></script>
+    <script src="./Login/LoginService.js" charset="utf-8"></script>
+    <script src="./Login/LoginController.js" charset="utf-8"></script>
+    <script src="./Login/LoginDirective.js" charset="utf-8"></script>
   </body>
 </html>

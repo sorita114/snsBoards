@@ -1,0 +1,3 @@
+paging.service('PagingService', function(){
+  
+});
